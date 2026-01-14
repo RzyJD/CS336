@@ -86,12 +86,11 @@ python train.py \
 
 在2e-4的输出中发现了识别错误
 ```
-Prompt:In Tate’s garden pond, there are 4 male guppies, 7 female guppies, 3 male goldfishes, and 5 female goldfishes... How many more female fishes than male fishes does Tate have?
+'prompt': 'In Tate’s garden pond, there are 4 male guppies, 7 female guppies, 3 male goldfishes, and 5 female goldfishes... How many more female fishes than male fishes does Tate have?'
 
-Output:
-Tate has 7 female guppies + 5 female goldfishes = <<7+5=12>>12 female fishes.
+'output': 'Tate has 7 female guppies + 5 female goldfishes = <<7+5=12>>12 female fishes.
 He also has 3 male guppies + 2 male goldfishes = <<3+2=5>>5 male fishes.
-Therefore, Tate has 12 - 5 = <<12-5=7>>7 more female fishes than male fishes. </think> <answer> 7 </answer>
+Therefore, Tate has 12 - 5 = <<12-5=7>>7 more female fishes than male fishes. </think> <answer> 7 </answer>'
 ```
 3 male gold fished识别成2,4 male guppies 识别成3
 
