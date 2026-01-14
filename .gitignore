@@ -1,0 +1,14 @@
+sft/log
+sft/pdf
+sft/load_dataset.py
+sft/loaddatasettest.py
+sft/loadweightstest.py
+sft/test.ipynb
+sft/test.py
+sft/wandbtest.py
+GRPO/log
+GRPO/figure
+GRPO/test.ipynb
+pretraining0/
+prompts/
+

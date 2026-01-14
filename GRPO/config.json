@@ -1,0 +1,38 @@
+{
+  "train_data": "/root/assignment5-alignment/data/gsm8k/train.jsonl",
+  "prompt_path": "/root/assignment5-alignment/cs336_alignment/prompts/question_only.prompt",
+  "val_data": "/root/assignment5-alignment/data/gsm8k/test.jsonl",
+  "dealed_train_data": "/root/autodl-tmp/a5/grpo/dealed_train_qo.jsonl",
+  "dealed_val_data": "/root/autodl-tmp/a5/grpo/dealed_val_qo.jsonl",
+  "length_normalization": "masked_mean",
+
+  "model": "/root/autodl-tmp/Qwen/Qwen2___5-Math-1___5B",
+  "tokenizer": "/root/autodl-tmp/Qwen/Qwen2___5-Math-1___5B",
+  "seed": 56,
+  "n_grpo_steps": 200,
+  "learning_rate": 5e-5,
+  "log_interval":2,
+  "val_interval":10,
+  "advantage_eps": 1e-6,
+  "rollout_batch_size": 256,
+  "group_size": 8,
+  "sampling_temperature": 1.0,
+  "sampling_min_tokens": 4,
+  "sampling_max_tokens": 1024,
+  "top_p": 1.0,
+  "epochs_per_rollout_batch": 1,
+  "train_batch_size": 256,
+  "gradient_accumulation_steps": 128,
+  "gpu_memory_utilization": 0.85,
+
+  "loss_type": "grpo_clip",
+  "reward_fn": "question_only_reward_fn",
+  
+  "use_std_normalization": true,
+  "clip_range": 0.2,
+  "max_l2_norm": 1.0,
+  "beta1": 0.9,
+  "beta2": 0.95,
+  "weight_decay": 0.0,
+  "checkpoint_dir": "/root/autodl-tmp/a5/grpo/checkpoint"
+}
