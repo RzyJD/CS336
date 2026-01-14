@@ -34,7 +34,6 @@
 | PostNorm           | 8e-4        | 1.3347 (Step 18100) | 1.1831 (Step 19900) |
 | Remove RoPE        | 8e-4        | 1.3944 (Step 18100) | 1.2588 (Step 20000) |
 | SiLU               | 8e-4        | 1.3640 (Step 19400) | 1.2173 (Step 19900) |
-| Remove RMSNorm     | 8e-4        | -                   | -                   |
 | Remove RMSNorm     | 3e-4        | 1.5351 (Step 18100) | 1.5458 (Step 19900) |
 # Alignment
 ## Experiments
