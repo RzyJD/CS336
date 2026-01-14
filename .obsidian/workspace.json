@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "README.md",
+                "file": "pretraining/README.md",
                 "mode": "source",
                 "source": false
               },
@@ -94,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "README.md",
+                "file": "pretraining/README.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -113,7 +113,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "README.md",
+                "file": "pretraining/README.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
@@ -156,7 +156,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "README.md",
+                "file": "pretraining/README.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
@@ -185,6 +185,9 @@
   },
   "active": "2fb39ff37b302c6d",
   "lastOpenFiles": [
+    "Pasted image 20260114211206.png",
+    "alignment/README.md",
+    "README.md",
     "alignment/grpo/figure/grad_norm_4way_comparison.png",
     "alignment/grpo/log/lr_5e-5_max_tokens.log",
     "alignment/grpo/log/lr_5e-5_reinforec_with_baseline.log",
@@ -200,11 +203,10 @@
     "alignment/grpo/vllm_utils.py",
     "alignment/grpo/val.py",
     "Pretraining/Readme.md",
-    "pretraining/Readme.md",
+    "pretraining/README.md",
     "grpo/figure/length_comparison.png",
     "grpo/figure/gradnorm_comparison.png",
     "grpo/figure/grad_norm_comparison.png",
-    "grpo/figure/grad_norm_4way_comparison.png",
-    "README.md"
+    "grpo/figure/grad_norm_4way_comparison.png"
   ]
 }

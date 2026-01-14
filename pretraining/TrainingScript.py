@@ -116,7 +116,7 @@ def main():
             config=json.load(f)
         #将日志传入args
         for key,value in config.items():
-            if hasattr(args,key):
+            if hasattr(args,key) and getattr(args,key) is None:
                 setattr(args,key,value)
     set_seed(56)
     run_name = f"pt_lr_{args.lr}"
