@@ -56,7 +56,7 @@ prompt示例：
 "Janet sells 16 - 3 - 4 = <<16-3-4=9>>9 duck eggs a day.\nShe makes 9 * 2 = $<<9*2=18>>18 every day at the farmer’s market. </think> <answer> 18 </answer>"
 ```
 
-##奖励函数以及评估指标
+## 奖励函数以及评估指标
 
 采用稀疏奖励机制，通过三个维度对模型输出进行判定（所有奖励均为0/1赋值）：
 - 格式奖励（Format Reward）：
