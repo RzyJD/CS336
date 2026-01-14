@@ -25,6 +25,7 @@ cd ..
 # Architecture
 
 <img width="747" height="503" alt="image" src="https://github.com/user-attachments/assets/2d8f25a6-40d9-487e-8f30-a5b6854b5eab" />
+
  其中FFN使用SwiGLU，自注意力机制在推理阶段使用KV-Cache
 # Training
 ## Data
