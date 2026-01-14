@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Pretraining/Readme.md",
+                "file": "README.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Readme"
+              "title": "README"
             }
           }
         ]
@@ -94,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Pretraining/Readme.md",
+                "file": "README.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +104,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Readme 的反向链接列表"
+              "title": "README 的反向链接列表"
             }
           },
           {
@@ -113,12 +113,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Pretraining/Readme.md",
+                "file": "README.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Readme 的出链列表"
+              "title": "README 的出链列表"
             }
           },
           {
@@ -156,13 +156,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Pretraining/Readme.md",
+                "file": "README.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Readme 的大纲"
+              "title": "README 的大纲"
             }
           }
         ]
@@ -185,7 +185,26 @@
   },
   "active": "2fb39ff37b302c6d",
   "lastOpenFiles": [
-    "README.md",
-    "Pretraining/Readme.md"
+    "alignment/grpo/figure/grad_norm_4way_comparison.png",
+    "alignment/grpo/log/lr_5e-5_max_tokens.log",
+    "alignment/grpo/log/lr_5e-5_reinforec_with_baseline.log",
+    "alignment/grpo/log/lr_5e-5_nostd.log",
+    "alignment/grpo/log/lr_5e-5_no_baseline.log",
+    "alignment/grpo/log/lr_5e-5_grpo.log",
+    "alignment/grpo/log/lr_5e-05_dr.grpo.log",
+    "alignment/grpo/figure/plot_gradnorm_comparison.py",
+    "alignment/grpo/figure/plot_gradnorm.py",
+    "alignment/grpo/figure/length_comparison.png",
+    "alignment/grpo/figure/gradnorm_comparison.png",
+    "alignment/grpo/figure/grad_norm_comparison.png",
+    "alignment/grpo/vllm_utils.py",
+    "alignment/grpo/val.py",
+    "Pretraining/Readme.md",
+    "pretraining/Readme.md",
+    "grpo/figure/length_comparison.png",
+    "grpo/figure/gradnorm_comparison.png",
+    "grpo/figure/grad_norm_comparison.png",
+    "grpo/figure/grad_norm_4way_comparison.png",
+    "README.md"
   ]
 }
