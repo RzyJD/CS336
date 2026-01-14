@@ -44,6 +44,7 @@
 不带减去baseline的策略梯度，减去baseline的策略梯度，GRPO进行对比
 <img width="1214" height="969" alt="image" src="https://github.com/user-attachments/assets/2187a98d-5c49-4a53-a8cb-851c09def79d" />
 <img width="756" height="453" alt="image" src="https://github.com/user-attachments/assets/2172b3ca-a7b0-4f0c-b6a4-b9d2cc30d4ec" />
+
 不减baseline的策略梯度模型出现模型坍塌，陷入局部最优（回答长度骤降，gradnorm趋于0）
 ```
 In Tate’s garden pond, there are 4 male guppies, 7 female guppies, 3 male goldfishes, and 5 female goldfishes.  He buys 2 male guppies, 1 female guppy, 2 male goldfishes, and 3 female goldfishes.  How many more female fishes than male fishes does Tate have?
@@ -80,6 +81,7 @@ User: Matt wants cookies for a snack, but his dad wants him to eat healthily. He
 Assistant: <think>
 2025-12-20 05:35:52,514 - INFO - [sample 2] output= First, let’s use C to express the number of carrot sticks Matt eats. According to his father's instruction, Matt can have C/2 + 2 cookies. Since Matt wants to eat five cookies, we can set up the equation C/2 + 2 = 5. Solving this equation, we get C/2 = 3, so C = 6. Therefore, Matt has to eat six carrot sticks.</think> <answer> 6 </answer>
 2025-12-20 05:35:52,515 - INFO - [sample 2] reward={'answer_reward': 1.0, 'format_reward': 1.0, 'reward': 1.0}
+```
 
 ### Dr.GRPO
 
