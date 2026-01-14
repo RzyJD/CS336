@@ -29,14 +29,17 @@ python train.py \
 
 在5e-5到5e-4之间搜索：
 
-
 <img width="839" height="339" alt="image" src="https://github.com/user-attachments/assets/b939a55f-547a-4412-a70f-d99e6c1df0c2" />
 
 1e-4的验证准确率最高，0.6641
+
 ## 分析
 **格式**：
+
 <img width="430" height="336" alt="image" src="https://github.com/user-attachments/assets/e79740c3-5057-4feb-ab91-a4a6219943bb" />
+
 学习率过小会学不到格式，正常或者较大学习率均能使得模型迅速学到回答格式
+
 **回答长度**
 
 <img width="1244" height="335" alt="image" src="https://github.com/user-attachments/assets/494ab47f-7bd0-4080-b2f3-ad3dc97fcdc3" />
@@ -56,13 +59,17 @@ python train.py \
 小学习率学不到东西，梯度一直保持高位，大学习率前期梯度不稳定，1e-4非常健康
 
 **回答文本**
+
 1e-4最好，回答比较清晰，长度合适
+
 ```
 'prompt': 'A conversation between User and Assistant. The User asks a question, and the Assistant solves it. The Assistant first thinks about the reasoning process in the mind and then provides the User with the answer. The reasoning process is enclosed within <think> </think> and answer is enclosed within <answer> </answer> tags, respectively, i.e., <think> reasoning process here </think> <answer> answer here </answer>.\nUser: Sandy walked from Holloway Shores to Sun Valley Shores for 8 hours on a particular day. She also walked half as many hours on the second day as she walked on the first day, to Hollock valley shores. Calculate the total time Sandy took to walk in the two days in minutes.\nAssistant: <think>'
 
 'output': 'On the second day, she walked half as many hours as she did on the first day, which is 8 * 0.5 = <<8*0.5=4>>4 hours.\nIn total, she walked for 8 + 4 = <<8+4=12>>12 hours.\nIn minutes, this is a total of 12 * 60 = <<12*60=720>>720 </think> <answer> 720 </answer>', 'correct_answer': '720', 'reward': {'answer_reward': 1.0, 'format_reward': 1.0, 'reward': 1.0}}]
 ```
+
 如果学习率过小或者过大，模型都会重复输出
+
 1e-3：
 
 <img width="680" height="452" alt="image" src="https://github.com/user-attachments/assets/d2ae2144-05a9-4427-a1eb-7b45e32cade3" />
