@@ -4,21 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "05b52f2c0249a5e6",
+        "id": "77790b965f247feb",
         "type": "tabs",
         "children": [
           {
-            "id": "2fb39ff37b302c6d",
+            "id": "bb16d0bc394f6303",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "pretraining/README.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "README"
+              "title": "新标签页"
             }
           }
         ]
@@ -94,7 +90,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "pretraining/README.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +99,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "README 的反向链接列表"
+              "title": "反向链接"
             }
           },
           {
@@ -113,12 +108,11 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "pretraining/README.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "README 的出链列表"
+              "title": "出链"
             }
           },
           {
@@ -156,13 +150,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "pretraining/README.md",
+                "file": "pretraining/Readme.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "README 的大纲"
+              "title": "Readme 的大纲"
             }
           }
         ]
@@ -183,8 +177,10 @@
       "bases:新建数据库": false
     }
   },
-  "active": "2fb39ff37b302c6d",
+  "active": "08b47212f7062503",
   "lastOpenFiles": [
+    "pretraining/README.md",
+    "pretraining/Readme.md",
     "Pasted image 20260114211206.png",
     "alignment/README.md",
     "README.md",
@@ -203,7 +199,6 @@
     "alignment/grpo/vllm_utils.py",
     "alignment/grpo/val.py",
     "Pretraining/Readme.md",
-    "pretraining/README.md",
     "grpo/figure/length_comparison.png",
     "grpo/figure/gradnorm_comparison.png",
     "grpo/figure/grad_norm_comparison.png",
