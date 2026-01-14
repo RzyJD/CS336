@@ -1,5 +1,6 @@
 # CS336
 # 文件结构
+```
 ├── alignment/
 │   ├── grpo/
 │   │   ├── README.md   #实验文档
@@ -16,6 +17,7 @@
 ├── .gitattributes
 ├── .gitignore
 ├── README.md
+```
 # Pretraining
 ## Architecture
 
