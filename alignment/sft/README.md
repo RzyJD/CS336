@@ -1,5 +1,6 @@
 # Experiment
 ## 超参数设置
+
 '''
 python train.py \
     --batch_size 128 \
@@ -21,6 +22,7 @@ python train.py \
     --sample_size 10 \
     --normalize_constant 1.0
     ''' 
+    
 ## 学习率搜索
 
 首先进行大范围搜索：
