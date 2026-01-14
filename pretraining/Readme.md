@@ -20,7 +20,9 @@ gunzip owt_valid.txt.gz
 cd ..
 ```
 # Architecture
+
 <img width="747" height="503" alt="image" src="https://github.com/user-attachments/assets/2d8f25a6-40d9-487e-8f30-a5b6854b5eab" />
+
 ## Training
 参数初始化：
 $$
@@ -49,7 +51,9 @@ python pretraining/TrainingScript.py \
 ## Experiments
 ### 学习率搜索
 最优学习率8e-4，最小val loss 1.3233
+
 <img width="1143" height="898" alt="image" src="https://github.com/user-attachments/assets/1e1f1392-c778-4136-8d80-e9fb2a7f2c67" />
+
 ### 对比实验
 |                    | 学习率配置 (max) | 最小验证损失 (Val Loss)   | 最小训练损失 (Train Loss) |
 | ------------------ | ----------- | ------------------- | ------------------- |
@@ -61,17 +65,27 @@ python pretraining/TrainingScript.py \
 | Remove RMSNorm     | 3e-4        | 1.5351 (Step 18100) | 1.5458 (Step 19900) |
 #### 去除RMSNorm
 学习率为8e-4的时候梯度爆炸
+
 <img width="1272" height="360" alt="image" src="https://github.com/user-attachments/assets/02d82e5b-d7bd-4e69-8119-4f4bf496386f" />
+
 3e-4的时候不错
 最小val loss: 1.5351
+
 <img width="1426" height="366" alt="image" src="https://github.com/user-attachments/assets/e6249b32-db54-44f2-bcd4-ba684739c3ef" />
+
 #### 使用postnorm
 区别不大，梯度稍大 
 最小val loss: 1.3233
+
 <img width="1283" height="358" alt="image" src="https://github.com/user-attachments/assets/c946839b-967f-4a66-97aa-74060d1820be" />
+
 #### 去除RoPE
 最小val loss: 1.3944
+
 <img width="1260" height="357" alt="image" src="https://github.com/user-attachments/assets/6b1b2d32-169e-4ab0-a174-04d9406e390e" />
+
 #### 使用silu
 最小val loss: 1.3944
+
 <img width="1198" height="338" alt="image" src="https://github.com/user-attachments/assets/d2e600dd-1dc6-4556-8694-ca6a4697dc2a" />
+
