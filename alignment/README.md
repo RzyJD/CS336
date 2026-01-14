@@ -55,4 +55,17 @@ prompt示例：
 ```
 "Janet sells 16 - 3 - 4 = <<16-3-4=9>>9 duck eggs a day.\nShe makes 9 * 2 = $<<9*2=18>>18 every day at the farmer’s market. </think> <answer> 18 </answer>"
 ```
- 
+
+##奖励函数以及评估指标
+
+采用稀疏奖励机制，通过三个维度对模型输出进行判定（所有奖励均为 $0 / 1$ 赋值）：
+- 格式奖励（Format Reward）：
+- 判定逻辑：利用正则表达式检测输出中是否完整包含＜／think＞、＜answer＞和＜／answer＞标签。
+- 赋值：满足格式要求计 1 分，否则计 0 分。
+- 答案奖励（Answer Reward）：
+- 判定逻辑：在＜answer＞标签内提取内容，利用 SymPy 库进行数学等价性校验，或利用 MathD 逻辑进行标准答案归一化比对。
+- 赋值：计算结果正确计 1 分，否则计 0 分。
+- 综合奖励（Reward）——核心验证指标：
+- 判定逻辑：同时满足格式奖励和答案奖励（即：Format Reward＝＝ 1 且 Answer Reward＝＝1）。
+- 赋值：两者均满足计 1 分，任一不满足则计 0 分。
+**评估指标为验证集的综合奖励准确率**
