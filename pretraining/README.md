@@ -42,7 +42,7 @@ They went into the pit to search. It was dark and scary. They could not find the
 ```
 故事长度分布：
 
-![[Pasted image 20260114221537.png]]
+![Uploading image.png…]()
 
 ## 训练配置
 参数初始化：
