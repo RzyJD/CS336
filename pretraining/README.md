@@ -47,9 +47,11 @@ They went into the pit to search. It was dark and scary. They could not find the
 
 ## 训练配置
 参数初始化：
+
 $$
 \mathcal{N}\left(\mu=0, \sigma^2=\frac{2}{d_{\text {in }}+d_{\text {out }}}\right) \text { truncated at }[-3 \sigma, 3 \sigma] .
 $$
+
 使用训练的BPE-Tokenizer
 使用AdamW
 使用余弦退火
