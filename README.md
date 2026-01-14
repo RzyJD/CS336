@@ -18,7 +18,8 @@
 │   └── ...
 ├── .gitattributes
 ├── .gitignore
-└── README.md
+├── README.md
+└── ...
 ```
 # Pretraining
 ## Architecture
