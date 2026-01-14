@@ -43,7 +43,7 @@ They went into the pit to search. It was dark and scary. They could not find the
 ```
 故事长度分布：
 
-![Uploading image.png…]()
+<img width="666" height="415" alt="Pasted image 20260114224204" src="https://github.com/user-attachments/assets/496c9beb-7849-47ce-9f73-0f7fb6d3dd09" />
 
 ## 训练配置
 参数初始化：
