@@ -85,7 +85,7 @@ python pretraining/TrainingScript.py \
 <img width="1260" height="357" alt="image" src="https://github.com/user-attachments/assets/6b1b2d32-169e-4ab0-a174-04d9406e390e" />
 
 #### 使用silu
-最小val loss: 1.3944
+最小val loss: 1.3640
 
 <img width="1198" height="338" alt="image" src="https://github.com/user-attachments/assets/d2e600dd-1dc6-4556-8694-ca6a4697dc2a" />
 
