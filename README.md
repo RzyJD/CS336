@@ -1,6 +1,21 @@
 # CS336
 # 文件结构
-
+├── alignment/
+│   ├── grpo/
+│   │   ├── README.md   #实验文档
+│   │   └── config.json #训练配置
+│   ├── sft/
+│   │   ├── README.md   #实验文档
+│   │   └── config.json #训练配置
+│   ├── README.md       #环境配置
+│   └── ...
+├── pretraining/
+│   ├── README.md       #环境配置+实验文档
+│   ├── config.json     #训练配置
+│   └── ...
+├── .gitattributes
+├── .gitignore
+├── README.md
 # Pretraining
 ## Architecture
 
