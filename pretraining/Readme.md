@@ -20,8 +20,8 @@ gunzip owt_valid.txt.gz
 cd ..
 ```
 # Architecture
-![Pasted image 20251220154500.png](app://cc5041c08089917614e1609928d33da1421c/Users/renzeyu/Documents/Obsidian%20Vault/Pasted%20image%2020251220154500.png?1766216700089)
-## Training and Experiments
+<img width="747" height="503" alt="image" src="https://github.com/user-attachments/assets/2d8f25a6-40d9-487e-8f30-a5b6854b5eab" />
+## Training
 参数初始化：
 $$
 \mathcal{N}\left(\mu=0, \sigma^2=\frac{2}{d_{\text {in }}+d_{\text {out }}}\right) \text { truncated at }[-3 \sigma, 3 \sigma] .
@@ -29,8 +29,7 @@ $$
 使用AdamW
 使用余弦退火
 使用梯度裁剪
-只搜索了学习率
-最优学习率8e-4
+超参数配置：
 python pretraining/TrainingScript.py \
     --lr 8e-4 \
     --batch_size 64 \
@@ -47,4 +46,32 @@ python pretraining/TrainingScript.py \
     --warmup_iters 2000 \
     --cosine_cycle_iters 20000 \
     --max_l2_norm 1 \
-![[Pasted image 20260114211206.png]]
+## Experiments
+### 学习率搜索
+最优学习率8e-4，最小val loss 1.3233
+<img width="1143" height="898" alt="image" src="https://github.com/user-attachments/assets/1e1f1392-c778-4136-8d80-e9fb2a7f2c67" />
+### 对比实验
+|                    | 学习率配置 (max) | 最小验证损失 (Val Loss)   | 最小训练损失 (Train Loss) |
+| ------------------ | ----------- | ------------------- | ------------------- |
+| Baseline (PreNorm) | 8e-4        | 1.3233 (Step 11900) | 1.1614 (Step 19900) |
+| PostNorm           | 8e-4        | 1.3347 (Step 18100) | 1.1831 (Step 19900) |
+| Remove RoPE        | 8e-4        | 1.3944 (Step 18100) | 1.2588 (Step 20000) |
+| SiLU               | 8e-4        | 1.3640 (Step 19400) | 1.2173 (Step 19900) |
+| Remove RMSNorm     | 8e-4        | -                   | -                   |
+| Remove RMSNorm     | 3e-4        | 1.5351 (Step 18100) | 1.5458 (Step 19900) |
+#### 去除RMSNorm
+学习率为8e-4的时候梯度爆炸
+<img width="1272" height="360" alt="image" src="https://github.com/user-attachments/assets/02d82e5b-d7bd-4e69-8119-4f4bf496386f" />
+3e-4的时候不错
+最小val loss: 1.5351
+<img width="1426" height="366" alt="image" src="https://github.com/user-attachments/assets/e6249b32-db54-44f2-bcd4-ba684739c3ef" />
+#### 使用postnorm
+区别不大，梯度稍大 
+最小val loss: 1.3233
+<img width="1283" height="358" alt="image" src="https://github.com/user-attachments/assets/c946839b-967f-4a66-97aa-74060d1820be" />
+#### 去除RoPE
+最小val loss: 1.3944
+<img width="1260" height="357" alt="image" src="https://github.com/user-attachments/assets/6b1b2d32-169e-4ab0-a174-04d9406e390e" />
+#### 使用silu
+最小val loss: 1.3944
+<img width="1198" height="338" alt="image" src="https://github.com/user-attachments/assets/d2e600dd-1dc6-4556-8694-ca6a4697dc2a" />
