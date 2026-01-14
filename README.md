@@ -48,10 +48,13 @@
 
 |                           | 学习率配置 (max) | 最高验证准确率 (Val Acc) |
 | ------------------------- | ----------- | ----------------- |
-| SFT                       | 1e-4        | 0.6641 (step 384)
-| GRPO (max_tokens norm)    | 5e-5        | 0.7703 (Step 140) |
-| GRPO (Standard)           | 5e-5        | 0.7672 (Step 70)  |
-| Dr.GRPO                   | 5e-5        | 0.7650 (Step 100) |
-| GRPO (Remove Std Norm)    | 5e-5        | 0.7309 (Step 100) |
-| Reinforce (with Baseline) | 5e-5        | 0.5800 (Step 100) |
+| SFT                       | 1e-4        | 0.6641 (step 384) |
 | Reinforce (no Baseline)   | 5e-5        | 0.5072 (Step 40)  |
+| Reinforce (with Baseline) | 5e-5        | 0.5800 (Step 100) |
+| GRPO (Standard)           | 5e-5        | 0.7672 (Step 70)  |
+| GRPO (max_tokens norm)    | 5e-5        | 0.7703 (Step 140) |
+| GRPO (Remove Std Norm)    | 5e-5        | 0.7309 (Step 100) |
+| Dr.GRPO                   | 5e-5        | 0.7650 (Step 100) |
+
+
+
