@@ -84,29 +84,36 @@ Assistant: <think>
 ```
 
 ### Dr.GRPO
+GRPO的损失函数：
 
-$$
-\begin{gathered}
-loss=-\frac{1}{G} \sum_{i=1}^G \sum_{t=1}^{\left|\mathbf{o}_i\right|}\left\{\min \left[\frac{\pi_\theta\left(o_{i, t} \mid \mathbf{q}, \mathbf{o}_{i,<t}\right)}{\pi_{\theta_{\text {old }}}\left(o_{i, t} \mid \mathbf{q}, \mathbf{o}_{i,<t}\right)} \hat{A}_{i, t}, \operatorname{clip}\left(\frac{\pi_\theta\left(o_{i, t} \mid \mathbf{q}, \mathbf{o}_{i,<t}\right)}{\pi_{\theta_{\text {old }}}\left(o_{i, t} \mid \mathbf{q}, \mathbf{o}_{i,<t}\right)}, 1-\epsilon, 1+\epsilon\right) \hat{A}_{i, t}\right]\right\} \\
-\text { where } \hat{A}_{i, t}=R\left(\mathbf{q}, \mathbf{o}_i\right)-\operatorname{mean}\left(\left\{R\left(\mathbf{q}, \mathbf{o}_1\right), \ldots, R\left(\mathbf{q}, \mathbf{o}_G\right)\right\}\right) .
-\end{gathered}
-$$
-
-在GRPO的基础上使用固定的常数（模型生成的最大tokens）去归一化每个token的loss而不是使用该句话的长度归一化loss
-
-$$
-\begin{aligned}
-Loss_{\text {GRPO-Clip }}(\theta) & =-\mathbb{E}_{q \sim \mathcal{D},\left\{o^{(i)}\right\}_{i=1}^G \sim \pi_\theta(\cdot \mid q)} \\
-& {[\frac{1}{G \times C} \sum_{i=1}^G  \sum_{t=1}^{\left|o^{(i)}\right|} \underbrace{\left.\min \left(\frac{\pi_\theta\left(o_t^{(i)} \mid q, o_{<t}^{(i)}\right)}{\pi_{\theta_{\text {old }}}\left(o_t^{(i)} \mid q, o_{<t}^{(i)}\right)} A^{(i)}, \operatorname{clip}\left(\frac{\pi_\theta\left(o_t^{(i)} \mid q, o_{<t}^{(i)}\right)}{\pi_{\theta_{\text {old }}}\left(o_t^{(i)} \mid q, o_{<t}^{(i)}\right)}, 1-\epsilon, 1+\epsilon\right) A^{(i)}\right)\right]}_{\text {per-token objective }} .}
-\end{aligned}
-$$
+<img width="782" height="191" alt="image" src="https://github.com/user-attachments/assets/196147ad-b952-4590-be6c-ad9604b96aee" />
 
 其中
 
-$$
-A^{(i)}=\frac{r^{(i)}-\operatorname{mean}\left(r^{(1)}, r^{(2)}, \ldots, r^{(G)}\right)}{\operatorname{std}\left(r^{(1)}, r^{(2)}, \ldots, r^{(G)}\right)+\text { advantage\_eps }},
-$$
+<img width="397" height="117" alt="image" src="https://github.com/user-attachments/assets/222fea63-7ac8-4129-881c-284005438b59" />
+
+Dr.GRPO在GRPO的基础上使用固定的常数（模型生成的最大tokens）去归一化每个token的loss而不是使用该句话的长度归一化loss
+
+<img width="724" height="136" alt="image" src="https://github.com/user-attachments/assets/2cafc94a-ef6e-4bc2-b32d-54dd9cdade98" />
 
 C为采样的时候生成的一句话的最大长度，在本次实验中设置为1024
 
-去掉了长度对loss的约束
+对比GRPO和Dr.GRPO的模型性能
+
+<img width="1215" height="974" alt="image" src="https://github.com/user-attachments/assets/891149d2-4006-4e00-8e77-69673b797e53" />
+
+<img width="1219" height="341" alt="image" src="https://github.com/user-attachments/assets/fad8c04a-b2f6-46c7-9d9f-b36d31c85323" />
+
+<img width="752" height="452" alt="image" src="https://github.com/user-attachments/assets/2b01e1c4-caef-433b-9d48-1ebcfbccda5a" />
+
+稳定性：Dr.GRPO 明显好于GRPO，梯度时刻保持在极低水平 
+
+准确率：上限相似，所有变体最终都达到了 0.7 - 0.8 左右的准确率。
+
+所有变体均出现了塌陷的现象
+
+Dr.GRPO的回答长度明显变长
+
+显然Dr.GRPO训练稳定性增加是由max-tokens长度归一化引起的
+
+
